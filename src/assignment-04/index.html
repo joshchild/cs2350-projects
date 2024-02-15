@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta name="robots" content="index, follow">
+    <title>Assignment 04 - CS2350</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* /////////////// GLOBALS /////////////// */
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+            /* border: 1px solid red; FOR TESTING */
+            padding: 0;
+            margin: 0;
+        }
+
+        .clearfix {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 2.9rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            line-height: 1.9rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: 1.9rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.3rem;
+            font-size: .9rem;
+            color: #999;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            padding: 10px;
+            background-color: #FF7F4F;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: .9rem;
+        }
+
+        .btn2 {
+            padding: 10px 40px;
+            background-color: #FF7F4F;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: .9rem;
+        }
+
+        .btn:hover,
+        .btn2:hover {
+            background-color: #000;
+        }
+
+        /* /////////////// HEADER /////////////// */
+
+        header {
+            width: 100%;
+            border-bottom: 1px solid #bbb;
+            clear: both;
+            background-color: #eee;
+            padding: 18px 20px;
+        }
+
+        .logo {
+            float: left;
+            display: inline;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .logo>span {
+            font-weight: 900;
+        }
+
+        nav {
+            float: right;
+            padding-left: 10px;
+        }
+
+        .nav-left {
+            float: left;
+        }
+
+        .nav-right {
+            float: right;
+        }
+
+        nav>ul>li {
+            display: inline;
+            padding: 0 10px;
+
+        }
+
+        nav>ul>li.active {
+            border-bottom: 2px solid #FF7F4F;
+            padding-bottom: 6px;
+        }
+
+        nav>ul>li>a {
+            font-size: 1rem;
+            display: inline;
+            text-decoration: none;
+            color: #FF7F4F;
+        }
+
+        nav>ul>li>a:hover {
+            color: #000;
+        }
+
+        /* /////////////// MAIN /////////////// */
+        main {
+            width: 70%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        /* /////////////// HERO /////////////// */
+
+        .hero {
+            width: 100%;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #bbb;
+        }
+
+        .hero>div>p {
+            margin-bottom: 28px;
+            /* add isolated space fix */
+        }
+
+        .hero>div {
+            float: left;
+            width: 50%;
+        }
+
+        .hero>div:first-child {
+            padding: 30px 30px 0 0;
+        }
+
+        .video {
+            position: relative;
+            padding-bottom: 32%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video>iframe {
+            position: absolute;
+            border: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* /////////////// POSTS /////////////// */
+
+        .posts {
+            display: table;
+            width: calc(100% + 40px);
+            margin: 0 -20px;
+            table-layout: fixed;
+            border-spacing: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .posts>.card {
+            display: table-cell;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+        }
+
+
+        .bg-img {
+
+            background-size: cover;
+            background-color: #FF7F4F;
+            height: 190px;
+            overflow: visible;
+            margin-bottom: 10px;
+        }
+
+        .posts>div>h3,
+        .posts>div>p {
+            padding: 0 20px;
+        }
+
+        .loadmore {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* /////////////// FOOTER /////////////// */
+
+        footer {
+            width: 100%;
+        }
+
+        .footer-top {
+            background-color: #555;
+            width: 100%;
+            padding: 30px;
+        }
+
+        .sitemap {
+            float: left;
+            width: 25%;
+        }
+
+        .sitemap li,
+        .links li {
+            list-style-type: none;
+            margin-bottom: 5px;
+        }
+
+        .links li a {
+            color: #FF7F4F;
+            font-size: .9rem;
+            text-decoration: none;
+        }
+
+        .links li a:hover {
+            text-decoration: underline;
+        }
+
+        ul.sitemap>li>h3 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .links {
+            margin-left: 10px;
+        }
+
+        .footer-bottom {
+            padding: 20px 0;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .footer-bottom>.legal {
+            float: left;
+            padding-left: 0;
+        }
+
+        .footer-bottom>.legal>ul>li {
+            padding-left: 0;
+        }
+
+        .copyright {
+            font-size: .9rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="clearfix">
+        <div class="logo">
+            Utah Mighty <span>FIVE</span>
+        </div>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+                <li><a href="#">Five</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li class="active"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero clearfix">
+            <div>
+                <h1>Close Your Eyes and Open Your Mind</h1>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna
+                    mollis euismod. Maecenas faucibus mollis interdum.</p>
+                <a href="#" class="btn">Take a Tour</a>&nbsp;&nbsp;&nbsp;
+                <a href="#" class="btn">Start a free trial</a>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/QlKOcyf915M?si=XvEyqRlNbk0A6Oqg" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <h2>What are they?</h2>
+
+        <section class="posts">
+
+            <div class="card">
+                <div class="bg-img" style="background-image: url('http://tinyurl.com/y88kfcyk');"></div>
+                <h3>Bryce Canyon National Park</h3>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna
+                    mollis euismod.</p>
+            </div>
+            <div class="card">
+                <div class="bg-img" style="background-image: url('http://tinyurl.com/2ythxk9p');"></div>
+                <h3>Zion National Park</h3>
+                <p>Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            </div>
+            <div class="card">
+                <div class="bg-img" style="background-image: url('http://tinyurl.com/493dpvz6');"></div>
+                <h3>Arches National Park</h3>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis
+                    euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel
+                    scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                    eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut.</p>
+            </div>
+
+        </section>
+
+        <div class="loadmore">
+            <a href="#" class="btn2">Remaining two</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-top clearfix">
+            <ul class="sitemap">
+                <li>
+                    <h3>Offices</h3>
+                    <ul class="links">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="sitemap">
+                <li>
+                    <h3>Links</h3>
+                    <ul class="links">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="sitemap">
+                <li>
+                    <h3>Contact</h3>
+                    <ul class="links">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="sitemap">
+                <li>
+                    <h3>Locations</h3>
+                    <ul class="links">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom clearfix">
+            <nav class="legal">
+                <ul>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Partner</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </nav>
+            <nav class="copyright">
+                &copy; All rights reserved
+            </nav>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Requirements
+
+    □ Recreate the sample landing page below using HTML and CSS. You may choose different fonts and colors. Follow these instructions to do so:
+
+    □ Place all your CSS rules internally within a <style> tag inside the <head> element of your HTML document.
+
+    □ Make sure to organize your HTML using semantic tags.
+
+    □ Use unordered lists for both the top nav menu and the links at the bottom.
+
+    □ Use floating to place things side by side.
+
+    □ Embed a YouTube video that is the same or similar to the one you see in the screen below. Make sure that this. YouTube video is responsive. Watch the video on videos and audios on how to do that.
+    
+    □ Make sure that the columns under the What are they? have equal heights.
+    
+    □ Link to images from https://unsplash.com/ Links to an external site.. Make sure that each image has an alt description and that they are all responsive
+    
+    □ For buttons, use the <a></a> tag and style it look like a button.
+    
+    □ Name your HTML document index.html
+    
+    □ validate it at https://validator.w3.org/#validate_by_upload Links to an external site., and submit it via Canvas.
+
+    -->
+
+</body>
+
+</html>

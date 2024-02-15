@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+    <meta name="robots" content="index, follow">
+    <title>CS2350 - Practice Activity 05</title>
+    <style>
+        /* /////////////// GLOBALS /////////////// */
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+            /* border: 1px solid red; FOR TESTING */
+            padding: 0;
+            margin: 0;
+        }
+
+        .clearfix {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            line-height: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 17px;
+        }
+
+        article,
+        section {
+            margin-bottom: 30px;
+        }
+
+        /* /////////////// HEADER /////////////// */
+        header {
+            width: 100%;
+            border-bottom: 1px solid #bbb;
+            clear: both;
+            background-color: #fff;
+            padding: 17px 20px;
+        }
+
+        .logo {
+            float: left;
+            display: inline;
+        }
+
+        .logo>h1 {
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        nav {
+            float: right;
+            padding-left: 10px;
+        }
+
+        .nav-left {
+            float: left;
+        }
+
+        .nav-right {
+            float: right;
+        }
+
+        nav>ul>li {
+            display: inline;
+            padding: 0 10px;
+            line-height: 25px;
+        }
+
+        nav>ul>li>a {
+            font-size: 1.1rem;
+            display: inline;
+            text-decoration: none;
+            color: orange;
+        }
+
+        nav>ul>li>a:hover {
+            text-decoration: underline;
+        }
+
+        /* /////////////// MAIN /////////////// */
+        main {
+            width: 70%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .titles {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .titles>h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .titles>h2>span {
+            color: salmon;
+        }
+
+        img.special {
+            width: 50%;
+            float: left;
+            margin: 0 20px 10px 0;
+            border: 1px solid #000;
+            border-radius: 15px;
+        }
+
+        .stats li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 10px 10px 0;
+            background-color: #000;
+            border-radius: 240px;
+            line-height: 240px;
+            width: 240px;
+            color: #fff;
+            text-align: center;
+            font-size: 2.1rem;
+        }
+
+        /* /////////////// COLS /////////////// */
+
+        .cols {
+            display: table;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .cols p {
+            padding: 15px;
+        }
+
+        .col1,
+        .col2,
+        .col3 {
+            float: left;
+            padding-bottom: 9999999px;
+            margin-bottom: -9999999px;
+            color: #fff;
+        }
+
+        .col1 {
+            background-color: #888;
+            width: 25%;
+        }
+
+        .col2 {
+            background-color: #000;
+            width: 50%;
+            font-weight: 400;
+        }
+
+        .col3 {
+            background-color: #888;
+            width: 25%;
+        }
+
+        /* /////////////// FOOTER /////////////// */
+
+        footer {
+            width: 100%;
+            border-top: 1px solid #bbb;
+            clear: both;
+            background-color: #fff;
+            padding: 17px 20px;
+            font-size: 1.1rem;
+        }
+
+        footer .name {
+            float: left;
+            font-weight: 900;
+        }
+
+        footer .copyright {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="clearfix">
+        <div class="logo">
+            <h1>Floated Menus:</h1>
+        </div>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="titles">
+            <h2><span>&lt;Article 1&gt;:</span> Wrapping text around an image
+            </h2>
+        </section>
+        <article>
+            <img src="https://images.unsplash.com/photo-1564072021684-429ab786cffb?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Black and white photo of a city." class="special">
+            <h3>A secondary heading</h3>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur
+                ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus
+                eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Vivamus
+                sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at
+                eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula
+                porta felis euismod semper.</p>
+        </article>
+        <section class="titles">
+            <h2><span>&lt;Article 2&gt;:</span> Centering text vertically</h2>
+        </section>
+        <div>
+            <ul class="stats">
+                <li>Selectors</li>
+                <li>Inheritance</li>
+                <li>Cascade</li>
+                <li>Specificity</li>
+            </ul>
+        </div>
+        <section class="titles">
+            <h2><span>&lt;Article 3&gt;:</span> Equal-height columns</h2>
+        </section>
+        <div class="cols clearfix">
+            <div class="col1">
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+                    ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque
+                    ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+            <div class="col2">
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis
+                    euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta
+                    ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Etiam porta
+                    sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                    auctor. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet
+                    rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                    vestibulum. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis
+                    dapibus posuere velit aliquet.</p>
+            </div>
+            <div class="col3">
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+                    ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque
+                    ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="clearfix">
+        <div class="name">Josh Child</div>
+        <div class="copyright">&copy; All rights reserved</div>
+    </footer>
+
+</body>
+
+</html>

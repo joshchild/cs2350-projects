@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* reset width and height of an element include its padding and border */
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            padding: 3% 0;
+        }
+
+        main {
+            width: 90%;
+            /* made container same width as image */
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 10px;
+            color: maroon;
+        }
+
+        header>.top>span:nth-child(2) {
+            float: right;
+        }
+
+        header>h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            border-top: 2px solid maroon;
+            margin: 10px 0 5px 0;
+            padding-top: 10px;
+        }
+
+        header>h1>.subtitle {
+            display: block;
+            font-size: 1.5rem;
+            border-top: 1px solid maroon;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .toph>img {
+            width: 100%;
+        }
+
+        /* ////////////// cards ////////////// */
+
+        .cards {
+            text-align: left;
+        }
+
+        .cards>div {
+            display: inline-block;
+            width: 30%;
+            background-color: #eee;
+            margin: 10px;
+            padding: 10px;
+            vertical-align: top;
+            height: 275px;
+            text-align: center;
+        }
+
+        .cards>div>ul,
+        .cards>div>p {
+            text-align: left;
+        }
+
+        .cards>div>span { /* used span to avoid error on validation */
+            background-color: #fff;
+            border: 1px solid #fff;
+            font-size: 1.5rem;
+            font-weight: 900;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            line-height: 60px;
+            display: inline-block;
+        }
+
+        blockquote {
+            font-size: 2rem;
+            color: maroon;
+            text-align: center;
+        }
+
+        blockquote::before,
+        blockquote::after {
+            content: '"';
+            font-size: 2rem;
+            color: grey;
+        }
+
+        table {
+            width: 98%;
+            margin: 10px;
+            margin-bottom: 50px;
+        }
+
+        table>thead {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: rosybrown;
+        }
+
+        thead th,
+        tbody td {
+            padding: 10px;
+        }
+
+        tbody tr:nth-child(even) {
+            /* pseudo-element */
+            background-color: #eee;
+        }
+
+        .featured {
+            background-color: thistle;
+            margin: 10px;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .featured img {
+            float: right;
+            border: 2px dashed green;
+            margin: 1rem;
+        }
+
+        /* ////////////// globals ////////////// */
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p,
+        li {
+            line-height: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="top">
+                <span>Elit Ultricies</span>
+                <span>January 27, 2024</span>
+            </div>
+            <h1>
+                A Newsletter
+                <span class="subtitle">Sed posuere consectetur est at lobortis.</span>
+            </h1>
+        </header>
+        <section class="toph">
+            <img src="https://via.placeholder.com/900x200" alt="">
+            <h2>Justo Vulputate Aenean Ultricies Ipsum</h2>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis
+                ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                massa justo sit amet risus.</p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                <li>Curabitur blandit tempus porttitor.</li>
+            </ol>
+        </section>
+        <section class="cards">
+            <div class="card">
+                <span>1</span>
+                <h2>Etiam Vehicula</h2>
+                <ul>
+                    <li>Praesent commodo cursus magna.</li>
+                    <li>Fusce dapibus, tellus ac cursus commodo.</li>
+                    <li>Aenean lacinia bibendum nulla sed.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span>2</span>
+                <h2>Quam Egestas</h2>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui</p>
+            </div>
+            <div class="card">
+                <span>3</span>
+                <h2>Tellus Vestibulum</h2>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui</p>
+            </div>
+        </section>
+        <blockquote>
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in.
+        </blockquote>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cursus</th>
+                    <th>Justo</th>
+                    <th>Ipsum</th>
+                    <th>Nullam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ornare Ligula Nibh</td>
+                    <td>Lorem Nibh</td>
+                    <td>Elit Nibh</td>
+                    <td>Tellus Commodo</td>
+                </tr>
+                <tr>
+                    <td>Malesuada Elit</td>
+                    <td>Fusce Porta</td>
+                    <td>Vestibulum Tristique</td>
+                    <td>Amet Dolor</td>
+                </tr>
+                <tr>
+                    <td>Cursus Cras</td>
+                    <td>Lorem Nibh</td>
+                    <td>Ligula Vehicula</td>
+                    <td>Elit Nibh</td>
+                </tr>
+                <tr>
+                    <td>Nibh Commodo</td>
+                    <td>Cursus Cras</td>
+                    <td>Ornare Ligula Nibh</td>
+                    <td>Lorem Nibh</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="featured">
+            <img src="https://via.placeholder.com/350x200" alt="">
+            <h2>Tellus Nibh Amet Aenean Nullam</h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac
+                consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis
+                mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu
+                leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed
+                consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac
+                consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis
+                mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu
+                leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed
+                consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>

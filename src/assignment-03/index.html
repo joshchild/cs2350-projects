@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Morbi leo risus, porta ac consectetur ac, vestibulum at eros.">
+  <title>CS2350 - Assignment 3</title>
+  <style>
+    /* ///////////// Globals & Resets ///////////// */
+
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    body {
+      background-color: #778999;
+      padding: 0;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    /* ///////////// Header ///////////// */
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      margin-bottom: 60px;
+    }
+
+    header>span.logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    header>nav {
+      display: inline-block;
+    }
+
+    header>nav>ul>li {
+      display: inline;
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    header>nav>ul>li a {
+      font-size: 1.2rem;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    header>nav>ul>li a.active,
+    header>nav>ul>li a:hover {
+      border-bottom: 3px solid #778999;
+    }
+
+    /* ///////////// Header ///////////// */
+
+    main {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 30px;
+      padding: 80px 40px 40px 40px;
+    }
+
+    /* ///////////// Header ///////////// */
+
+    .callout>p {
+      width: 60%;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      color: #778999;
+      margin: 0 auto;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa;
+      padding: 30px 0;
+    }
+
+    /* ///////////// Article ///////////// */
+
+    .article {
+      padding-top: 60px;
+    }
+
+    .article>img {
+      margin-bottom: 40px;
+    }
+
+    .article>p {
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+    }
+
+    .article ol,
+    .article ul {
+      padding-left: 50px;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      margin-bottom: 30px;
+    }
+
+    .article h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .article h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .article h3 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #778999;
+    }
+
+    /* ///////////// Article Table ///////////// */
+
+    .table-main {
+      width: 100%;
+      border-collapse: collapse;
+      /* removes the default space between cells */
+    }
+
+    .table-main th,
+    table td {
+      text-align: left;
+    }
+
+    .table-main tbody tr td:nth-child(1),
+    table thead th:nth-child(1) {
+      width: 50%;
+    }
+
+    .table-main th {
+      padding: 10px 0;
+      border-bottom: 3px solid #778999;
+    }
+
+    .table-main td {
+      padding: 10px 0;
+      border-bottom: 1px solid #778999;
+    }
+
+    .table-main tr:last-child td {
+      padding: 10px 0;
+      border-bottom: 3px solid #778999;
+    }
+
+    /* ///////////// Footer ///////////// */
+    footer {
+      margin-top: 60px;
+      padding: 50px 0;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+    }
+
+    footer>nav {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    footer>nav>ul>li {
+      display: inline;
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    footer>nav>ul>li a {
+      color: #778999;
+      text-decoration: none;
+    }
+
+    footer>nav>ul>li a.active,
+    footer>nav>ul>li a:hover {
+      border-bottom: 3px solid #778999;
+    }
+
+    footer>address {
+      margin-bottom: 7px;
+    }
+
+    .email>a {
+      color: #778999;
+      text-decoration: none;
+    }
+
+    .email>a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span class="logo">Josh Child</span>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Articles</a></li>
+        <li><a href="#">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <blockquote class="callout">
+      <p>
+        Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.
+        Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla maecenas
+        faucibus. <strong>- John Doe</strong>
+      </p>
+    </blockquote>
+    <section class="article">
+      <h1>Commodo Mattis Tristique Dapibus Sem</h1>
+      <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+      <img
+        src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2759&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Waterfall with green cliffs and sunset.">
+
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor
+        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel
+        eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod
+        semper. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+      <ul>
+        <li>Nulla vitae elit libero, a pharetra augue.</li>
+        <li>Donec sed odio dui.</li>
+        <li>Nulla vitae elit libero, a pharetra augue.</li>
+        <li>Nullam id dolor id nibh ultricies vehicula ut id elit.</li>
+        <li>Etiam porta sem malesuada magna mollis euismod.</li>
+      </ul>
+
+      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+        risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam.</p>
+
+      <h2>Condimentum Vulputate Mattis Elit Sollicitudin</h2>
+
+      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id
+        ligula porta felis euismod semper.</p>
+
+      <ol>
+        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper
+          nulla non metus auctor fringilla.</li>
+        <li>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor
+          ligula, eget lacinia odio sem nec elit.</li>
+        <li>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non
+          magna.</li>
+        <li>Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</li>
+      </ol>
+
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus.</p>
+
+      <h2>Quam Ornare Elit Nibh Ultricies</h2>
+
+      <table class="table-main">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Magna Ornare</td>
+            <td>Vestibulum Fusce</td>
+            <td>Ullamcorper</td>
+          </tr>
+          <tr>
+            <td>Malesuada Ullamcorper</td>
+            <td>Fusce Condimentum</td>
+            <td>Vestibulum</td>
+          </tr>
+          <tr>
+            <td>Nullam Ornare</td>
+            <td>Lorem Vestibulum</td>
+            <td>Consectetur</td>
+          </tr>
+          <tr>
+            <td>Euismod Nullam</td>
+            <td>Malesuada Dolor</td>
+            <td>Pharetra</td>
+          </tr>
+          <tr>
+            <td>Euismod Tortor</td>
+            <td>Elit Egestas</td>
+            <td>Ornare</td>
+          </tr>
+          <tr>
+            <td>Cras Magna</td>
+            <td>Dapibus Porta</td>
+            <td>Ligula</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Interests</a></li>
+      </ul>
+    </nav>
+    <address>2568 Ambercove St. New Town, XState 82085</address>
+    <p class="email"><a href="mailto:joe@example.com">joe@example.com</a></p>
+    <p class="copyright">&copy; 2021 - 2025 All rights reserved</p>
+  </footer>
+</body>
+
+</html>
