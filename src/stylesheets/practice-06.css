@@ -43,3 +43,8 @@ div {
     display: flex;
     flex-flow: row nowrap;
 }
+
+.gallery>.bottom {
+    display: flex;
+    flex-flow: row nowrap;
+}

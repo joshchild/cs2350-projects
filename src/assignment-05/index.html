@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS2350 - Responsive web page">
+    <meta name="robots" content="index, follow">
+    <title>CS2350 - Assignment 05</title>
+    <style>
+        /* //////////////////// GLOBALS //////////////////// */
+
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap");
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        /* //////////////////// MOBILE VIEW //////////////////// */
+
+        .search>input,
+        nav {
+            display: none;
+        }
+
+        header {
+            border-bottom: 1px solid #999;
+        }
+
+        header>.top {
+            padding: 20px;
+        }
+
+        .logo>h1 {
+            font-size: 1.3rem;
+        }
+
+        main {
+            margin: 30px auto;
+            padding: 0 30px;
+        }
+
+        main>.posts>.post>.post-text {
+            margin-bottom: 30px;
+        }
+
+        main>.posts>.post>.post-text>a {
+            display: none;
+        }
+
+        main>.posts>.post>.post-text>h2 {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        main>.posts>.post>.post-text>.meta {
+            color: #999;
+            margin-bottom: 10px;
+            font-size: .9rem;
+            line-height: 1.2rem;
+        }
+
+        main>.posts>.post>.post-text>p {
+            color: #000;
+            font-size: .9rem;
+            line-height: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        main>aside {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main>.posts>.post>.featured-image>img {
+            border-radius: 1rem;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            height: 1px;
+            border: none;
+            background-color: #999;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #999;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer>.social {
+            display: none;
+        }
+
+        /* //////////////////// TABLET VIEW //////////////////// */
+
+        @media all and (min-width: 700px) {
+
+            .logo>h1 {
+                font-size: 1.7rem;
+            }
+
+            main {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                padding: 0 30px;
+            }
+
+            main>.posts>.post {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            main>.posts>.post>.post-text>h2 {
+                font-size: 1.7rem;
+            }
+
+            main>.posts>.post>.post-text>p {
+                font-size: 1rem;
+                line-height: 1.4rem;
+
+            }
+
+            main>.posts>.post>.post-text>a {
+                display: inline;
+                background-color: #FF7F50;
+                border-radius: 10px;
+                padding: 10px 25px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            main>.posts>.post>.post-text>a:hover {
+                background-color: #000;
+            }
+
+            main>.posts>.post>.post-text>.meta {
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+
+            main>.posts>.post>.featured-image>img {
+                margin-bottom: 0;
+            }
+
+            main>aside {
+                display: block;
+                width: 275px;
+                background-color: #ddd;
+                border-radius: 1.5rem;
+                flex-shrink: 0;
+                flex-grow: 0;
+                padding: 20px;
+            }
+
+            main>aside>img {
+                margin-bottom: 15px;
+            }
+
+            main>aside>p {
+                color: #000;
+                line-height: 1.4rem;
+                margin-bottom: 25px;
+            }
+
+            main>aside>h2 {
+                font-size: 1.5rem;
+                color: #666;
+                margin-bottom: 10px;
+            }
+
+        }
+
+
+        /* //////////////////// DESKTOP VIEW //////////////////// */
+
+        @media all and (min-width: 1000px) {
+
+            body {
+                background-color: #fff;
+            }
+
+            header {
+                border-bottom: 0;
+            }
+
+            header>.top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .search>input {
+                display: inline;
+                background-color: #ddd;
+                border: 0;
+                padding: 10px 50px;
+                margin: 0;
+                border-radius: 2rem;
+                text-align: center;
+                color: #000;
+                font-size: 1rem;
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            nav {
+                display: block;
+                background-color: #ddd;
+                text-align: center;
+                width: 100%;
+                padding: 18px 0;
+            }
+
+            nav>ul>li {
+                display: inline;
+            }
+
+            nav>ul>li>a {
+                color: #FF7F50;
+                font-size: 1.1rem;
+                padding: 0 20px;
+                text-decoration: none;
+            }
+
+            nav>ul>li>a:hover {
+                text-decoration: underline;
+            }
+
+            main {
+                display: flex;
+                width: 80%;
+                gap: 30px;
+                padding: 0;
+            }
+
+            main>.posts {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            main>.posts>.post {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+            }
+
+            main>.posts>.post>.featured-image>img {
+                width: 250px;
+                height: 250px;
+                border-radius: 1.3rem;
+            }
+
+            main>.posts>.post>.post-text {
+                flex-grow: 1;
+            }
+
+            hr {
+                margin-bottom: 0;
+            }
+
+            main>aside {
+                width: 300px;
+            }
+
+            footer {
+                background-color: #999;
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+            }
+
+            footer>.social {
+                display: block;
+            }
+
+            footer>.social>ul>li {
+                display: inline;
+                margin-right: 20px;
+            }
+
+            footer>.social>ul>li>a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            footer>.social>ul>li>a:hover {
+                text-decoration: underline;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top">
+            <div class="logo">
+                <h1>Josh Child</h1>
+            </div>
+            <div class="search"><input type="text" name="search" placeholder="Type to Search"></div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recent Posts</a></li>
+            <li><a href="#">Old Posts</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="posts">
+            <div class="post">
+                <div class="featured-image">
+                    <img src="http://tinyurl.com/yc5ewscz" alt="Southern Utah with blue skies">
+                </div>
+                <article class="post-text">
+                    <h2>First post with image</h2>
+                    <div class="meta">By Adam Smith, Jan 1, 2021</div>
+                    <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor
+                        fringilla. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Donec id elit
+                        non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Sed
+                        posuere consectetur est at lobortis.</p>
+                    <a href="#" class="button">Read More</a>
+                </article>
+            </div>
+            <hr>
+            <div class="post">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1591105379517-39bc1b81bf2b?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Northern Utah during a sunset">
+                </div>
+                <article class="post-text">
+                    <h2>Second post with image</h2>
+                    <div class="meta">By John Doe, Jan 1, 2021</div>
+                    <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor
+                        fringilla. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Donec id elit
+                        non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Sed
+                        posuere consectetur est at lobortis.</p>
+                    <a href="#" class="button">Read More</a>
+                </article>
+            </div>
+        </div>
+        <aside>
+            <h2>Secondary content here</h2>
+            <img src="https://images.unsplash.com/photo-1557939403-1760a0e47505?q=80&w=3496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Southern Utah during at dusk">
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.
+                Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida
+                at eget metus.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+        <div class="copyright">&copy; All rights reserved.</div>
+    </footer>
+
+</body>
+
+</html>
