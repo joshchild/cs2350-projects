@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta name="description" content="Forms markup and styles">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="/stylesheets/practice-07.css" />
     <title>CS2350 - Practice 07</title>
@@ -13,7 +13,7 @@
 <body>
 
     <form action="post">
-        <h1>Registration</h1>
+        <h1>Registration Form</h1>
         <div class="field">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="John Doe">
@@ -39,14 +39,53 @@
         </div>
         <fieldset>
             <legend>Address</legend>
-            
+            <div class="field">
+                <label for="street">Street</label>
+                <input type="text" name="street" id="street"
+                    placeholder="Type your street name including apt # here...">
+            </div>
+            <div class="field">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="Type your city here...">
+            </div>
+            <div class="field">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="">Select a State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="UT" selected>Utah</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="zip">Zip Code</label>
+                <input type="text" name="zip" id="zip" placeholder="84096" maxlength="5">
+            </div>
         </fieldset>
+        <div class="field">
+            <label for="degrees">Degrees</label>
+            <select name="degrees" id="degrees" multiple>
+                <option value="hs">High School</option>
+                <option value="as">Associate's</option>
+                <option value="bs">Bachelor's</option>
+                <option value="ms">Masters</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Hobbies</label>
+            <input type="checkbox" name="football" id="football">
+            <label for="football">Play Football</label>
+            <input type="checkbox" name="basketball" id="basketball">
+            <label for="basketball">Play Basketball</label>
+        </div>
+        <div class="field">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Cancel</button>
+        </div>
     </form>
 
 
-    <!-- INSTRUCTIONS
-        Watch the CSS fundamentals review example videos (6 parts) and follow along. This example will  help you not only review what learned already about CSS but also prepare of the midterm exam next week. Place your HTML code in src/example01.html and your CSS in src/stylesheets/example01.css.  Use the command npm start to run your local development server and display this page (http://localhost:8080/example01.html Links to an external site.) in the browser. Take a screenshot of your finalized page in the browser and load it to Canvas.
-    -->
 </body>
 
 </html>

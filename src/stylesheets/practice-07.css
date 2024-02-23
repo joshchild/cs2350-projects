@@ -10,3 +10,50 @@
     margin: 0;
 }
 
+form {
+    width: 80%;
+    margin: 2rem auto;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: 1px solid red;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+fieldset legend {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.field {
+    margin: 1rem;
+}
+
+.field input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 100%;
+}
+
+button {
+    padding: .8rem 2rem;
+    background-color: #ccc;
+    border: 0;
+    border-radius: .4rem;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #3378e8;
+    color: #fff;
+}
+
+button[type="reset"]{
+    background-color: #000;
+    color: white;
+}

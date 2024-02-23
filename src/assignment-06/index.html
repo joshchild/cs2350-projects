@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, nofollow">
+    <meta name="description" content="">
+    <title>CS</title>
+    <style>
+        /* /////////////// GLOBALS /////////////// */
+
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap");
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+            /* border: 1px solid red; FOR TESTING */
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #F1F1FC;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        a {
+            color: #3C36EE;
+            text-decoration: none;
+        }
+
+        a.current, a:hover {
+            border-bottom: 3px solid;
+            padding-bottom: 4px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        /* /////////////// DESKTOP /////////////// */
+        nav {
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-direction: row;
+            border-bottom: 1px solid #D7D2FD;
+            padding: 20px;
+        }
+
+        nav>div:last-child {
+            margin-left: auto;
+        }
+
+        .top-left-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-left-menu>li {
+            display: inline;
+        }
+
+        .top-right-nav {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+
+        .top-right-nav>li {
+            display: inline;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            Josh Child
+        </div>
+        <div>
+            <ul class="top-left-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#" class="current">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="top-right-nav">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
