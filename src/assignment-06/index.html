@@ -20,7 +20,6 @@
         ::after,
         ::before {
             box-sizing: inherit;
-            /* border: 1px solid red; FOR TESTING */
             padding: 0;
             margin: 0;
         }
@@ -35,9 +34,10 @@
             text-decoration: none;
         }
 
-        a.current, a:hover {
+        a.current,
+        a:hover {
             border-bottom: 3px solid;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
         }
 
         .logo {
@@ -45,12 +45,26 @@
             font-weight: 600;
         }
 
-        /* /////////////// DESKTOP /////////////// */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #000;
+            color: #D7D2FD;
+            font-size: .9rem;
+        }
+
         nav {
             background-color: #fff;
             width: 100%;
             display: flex;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
             flex-direction: row;
             border-bottom: 1px solid #D7D2FD;
@@ -62,25 +76,191 @@
         }
 
         .top-left-menu {
-            display: flex;
-            gap: 20px;
-        }
-
-        .top-left-menu>li {
-            display: inline;
+            display: none;
+            gap: 25px;
+            list-style-type: none;
         }
 
         .top-right-nav {
-            display: flex;
-            gap: 20px;
+            display: none;
+            gap: 25px;
+            list-style-type: none;
             justify-content: flex-end;
         }
 
-        .top-right-nav>li {
-            display: inline;
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 40px;
+            padding: 40px 10%;
+            margin: 0 auto;
+        }
+
+        .main-menu {
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 1.5rem;
+            border: 1px solid #D7D2FD;
+        }
+
+        .main-menu>ul {
+            list-style-type: none;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .main-menu>ul>li {
+            margin-bottom: 10px;
+        }
+
+        .main-content {
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 1.5rem;
+            border: 1px solid #D7D2FD;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #3C36EE;
+            margin: 10px 0 20px 0;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        input {
+            border-radius: .2rem;
+            border: 1px solid #999;
+            width: 100%;
+            padding: 10px;
+
+        }
+
+        .success {
+            border: 1px solid rgb(17, 228, 38);
+        }
+
+        .msg-success {
+            position: relative;
+            font-size: .8rem;
+            color: rgb(17, 228, 38);
+        }
+
+        .error {
+            border: 1px solid rgb(228, 17, 35);
+        }
+
+        .msg-error {
+            position: relative;
+            font-size: .8rem;
+            color: rgb(228, 17, 35);
+        }
+
+        .radio {
+            display: flex;
+            gap: 5px;
+            list-style-type: none;
+        }
+
+        .radio li:nth-child(2n) {
+            margin-right: 15px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        button {
+            padding: .8rem 2rem;
+            background-color: #ccc;
+            border: 0;
+            border-radius: .4rem;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            background-color: #3C36EE;
+            color: #fff;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        button[type="button"] {
+            background-color: #eee;
+            color: #3C36EE;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            font-size: .9rem;
+            color: #999;
+            border-radius: .2rem;
+            border: 1px solid #999;
+        }
+
+        .submit {
+            margin-top: 20px;
         }
 
 
+
+
+        /* /////////////// DESKTOP /////////////// */
+
+        @media all and (min-width: 1000px) {
+
+            .top-left-menu {
+                display: flex;
+                gap: 25px;
+                list-style-type: none;
+            }
+
+            .top-right-nav {
+                display: flex;
+                gap: 25px;
+                list-style-type: none;
+                justify-content: flex-end;
+            }
+
+            main {
+                flex-direction: row;
+            }
+
+            .main-menu {
+                width: 25%;
+            }
+
+            .main-content {
+                width: 75%;
+            }
+
+            button[type="submit"] {
+                margin-bottom: 0;
+            }
+
+        }
     </style>
 </head>
 
@@ -107,7 +287,80 @@
     </nav>
     <main>
 
+        <div class="main-menu">
+            <h2>Main Menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <h2>Featured Projects</h2>
+            <ul>
+                <li><a href="#">Project A</a></li>
+                <li><a href="#">Project B</a></li>
+                <li><a href="#">Project C</a></li>
+                <li><a href="#">Project D</a></li>
+                <li><a href="#">Project E</a></li>
+                <li><a href="#">Project F</a></li>
+                <li><a href="#">Project G</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Contact Us Form</h1>
+            <hr>
+            <form action="post">
+
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="full-name">
+                </div>
+
+                <div class="field">
+                    <label for="un">Username</label>
+                    <input type="text" id="un" name="uname" class="success">
+                    <span class="msg-success">This username is available</span>
+                </div>
+
+                <div class="field">
+                    <label>Are you a member?</label>
+                    <ul class="radio">
+                        <li><input type="radio" id="yes" name="member"></li>
+                        <li><label for="yes">Yes</label></li>
+                        <li><input type="radio" id="no" name="member"></li>
+                        <li><label for="no">No</label></li>
+                    </ul>
+                </div>
+
+                <div class="field">
+                    <label for="name">Email</label>
+                    <input type="email" id="email" name="email" class="error">
+                    <span class="msg-error">This email is invalid</span>
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea name="message" rows="5">Textarea</textarea>
+                </div>
+
+                <ul class="radio">
+                    <li><input type="checkbox" id="agree" name="agree"></li>
+                    <li><label for="agree">I agree to the <a href="#">terms and conditions</a></label></li>
+                </ul>
+
+                <div class="submit">
+                    <button type="submit">Submit</button>
+                    <button type="button">Cancel</button>
+                </div>
+
+            </form>
+        </div>
+
     </main>
+
+    <footer>
+        &copy; 2024 - CS2350 - All rights reserved.
+    </footer>
 
 
 

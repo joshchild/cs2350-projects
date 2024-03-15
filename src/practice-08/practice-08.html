@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    document.write("<h1>12 by 12 Multiplication Table</h1>")
+
+    // TODO: Your code to create the table goes here
+
+    document.write('<table>');
+    for (let i = 1; i <= 12; i++) {
+      document.write('<tr>');
+      for (let j = 1; j <= 12; j++) {
+        document.write(`<td>${i * j}</td>`);
+      }
+      document.write('</tr>');
+    }
+    document.write('</table>');
+
+  </script>
+
+</body>
+
+</html>
